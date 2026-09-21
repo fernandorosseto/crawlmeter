@@ -1,0 +1,3 @@
+# LF everywhere, as .editorconfig says. Normalized on commit, so a Windows
+# editor or script cannot slip CRLF into the repository.
+* text=auto eol=lf

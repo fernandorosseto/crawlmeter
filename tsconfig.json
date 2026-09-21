@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "types": ["node"],
+
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "dist",
+
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+
+    // The examples are plain JavaScript, because that is what the quickstart in
+    // the README has to be. allowJs lets the tests import them and lets tsc
+    // infer their types; the build only ever compiles src, so nothing from
+    // examples/ reaches dist.
+    "allowJs": true,
+    "checkJs": false,
+
+    // The examples import "crawlmeter" by name, exactly as a user would, so the
+    // code in them is copy-pasteable into the README. Mapping the name here —
+    // and to the same file in vitest.config.ts — makes tsc resolve it to source
+    // instead of walking the package export map, which would demand a `rootDir`
+    // in this file. There must not be one: it breaks the typecheck of the tests
+    // with TS6059.
+    "paths": {
+      "crawlmeter": ["./src/index.ts"],
+      "crawlmeter/next": ["./src/adapters/next.ts"],
+      "crawlmeter/x402": ["./src/payment/modules.ts"]
+    }
+  },
+  "include": ["src/**/*", "test/**/*"]
+}

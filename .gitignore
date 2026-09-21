@@ -1,0 +1,44 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+crawlmeter.db
+crawlmeter.db-journal
+.env
+.env.*
+!.env.example
+.test-build/
+
+# Local databases, whatever they are called (crawlmeter.db is the default).
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Packed tarballs: `npm pack` output is built, never committed.
+*.tgz
+
+# Credentials and keys. Nothing in this project needs one committed.
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Local tool settings.
+.claude/settings.local.json
+.vscode/
+.idea/
+
+# Vitest leaves these behind when a run is interrupted.
+vitest.config.ts.timestamp-*
+
+# Internal working notes (Portuguese), kept out of the public repository.
+CLAUDE.md
+PLAN.md
+CONTEXT-PASSO-2.md

@@ -1,0 +1,81 @@
+{
+  "name": "crawlmeter",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandorosseto/crawlmeter.git"
+  },
+  "homepage": "https://github.com/fernandorosseto/crawlmeter#readme",
+  "bugs": {
+    "url": "https://github.com/fernandorosseto/crawlmeter/issues"
+  },
+  "description": "See how much AI crawler traffic your site serves for free — and optionally charge for it.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./next": {
+      "types": "./dist/adapters/next.d.ts",
+      "import": "./dist/adapters/next.js"
+    },
+    "./x402": {
+      "types": "./dist/payment/modules.d.ts",
+      "import": "./dist/payment/modules.js"
+    }
+  },
+  "bin": {
+    "crawlmeter": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "changeset": "changeset",
+    "release": "npm run build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.0.0",
+    "@x402/core": "^2.26.0",
+    "@x402/evm": "^2.26.0",
+    "express": "^5.2.1",
+    "next": "^16.3.5",
+    "postgres": "^3.4.9",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "typescript": "^5.6.0",
+    "viem": "^2.56.8",
+    "vitest": "^5.0.1"
+  },
+  "peerDependencies": {
+    "@x402/core": "^2.26.0",
+    "@x402/evm": "^2.26.0",
+    "next": ">=15.5.0",
+    "postgres": "^3.4.0"
+  },
+  "peerDependenciesMeta": {
+    "@x402/core": {
+      "optional": true
+    },
+    "@x402/evm": {
+      "optional": true
+    },
+    "next": {
+      "optional": true
+    },
+    "postgres": {
+      "optional": true
+    }
+  }
+}
