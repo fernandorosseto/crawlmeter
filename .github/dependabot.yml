@@ -8,9 +8,17 @@ updates:
     # versions are caught and pulled within days of being published.
     cooldown:
       default-days: 7
+    # Minor and patch updates come together; a major version arrives as its
+    # own pull request, to be reviewed on its own.
     groups:
       development:
         dependency-type: development
+        update-types: [minor, patch]
+    ignore:
+      # The types must match the oldest Node we support (22), or the code can
+      # compile against APIs that do not exist there.
+      - dependency-name: "@types/node"
+        update-types: [version-update:semver-major]
 
   - package-ecosystem: github-actions
     directory: /
