@@ -1,0 +1,247 @@
+{
+  "version": "2026-09-20",
+  "agents": [
+    {
+      "id": "gptbot",
+      "operator": "openai",
+      "uaPattern": "GPTBot",
+      "purpose": "training",
+      "ipRangesUrl": "https://openai.com/gptbot.json",
+      "ipRangesFormat": "prefixes",
+      "rdnsSuffixes": [],
+      "maxConfidence": "ip-range",
+      "docs": "https://developers.openai.com/api/docs/bots"
+    },
+    {
+      "id": "oai-searchbot",
+      "operator": "openai",
+      "uaPattern": "OAI-SearchBot",
+      "purpose": "search",
+      "ipRangesUrl": "https://openai.com/searchbot.json",
+      "ipRangesFormat": "prefixes",
+      "rdnsSuffixes": [],
+      "maxConfidence": "ip-range",
+      "docs": "https://developers.openai.com/api/docs/bots"
+    },
+    {
+      "id": "oai-adsbot",
+      "operator": "openai",
+      "uaPattern": "OAI-AdsBot",
+      "purpose": "ads",
+      "ipRangesUrl": "https://openai.com/adsbot.json",
+      "ipRangesFormat": "prefixes",
+      "rdnsSuffixes": [],
+      "maxConfidence": "ip-range",
+      "docs": "https://developers.openai.com/api/docs/bots"
+    },
+    {
+      "id": "chatgpt-user",
+      "operator": "openai",
+      "uaPattern": "ChatGPT-User",
+      "purpose": "user-triggered",
+      "ipRangesUrl": "https://openai.com/chatgpt-user.json",
+      "ipRangesFormat": "prefixes",
+      "rdnsSuffixes": [],
+      "maxConfidence": "ip-range",
+      "docs": "https://developers.openai.com/api/docs/bots"
+    },
+    {
+      "id": "claudebot",
+      "operator": "anthropic",
+      "uaPattern": "ClaudeBot",
+      "purpose": "training",
+      "ipRangesUrl": "https://claude.com/crawling/bots.json",
+      "ipRangesFormat": "prefixes",
+      "rdnsSuffixes": [],
+      "maxConfidence": "ip-range",
+      "docs": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+    },
+    {
+      "id": "claude-user",
+      "operator": "anthropic",
+      "uaPattern": "Claude-User",
+      "purpose": "user-triggered",
+      "ipRangesUrl": "https://claude.com/crawling/bots.json",
+      "ipRangesFormat": "prefixes",
+      "rdnsSuffixes": [],
+      "maxConfidence": "ip-range",
+      "docs": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+    },
+    {
+      "id": "claude-searchbot",
+      "operator": "anthropic",
+      "uaPattern": "Claude-SearchBot",
+      "purpose": "search",
+      "ipRangesUrl": "https://claude.com/crawling/bots.json",
+      "ipRangesFormat": "prefixes",
+      "rdnsSuffixes": [],
+      "maxConfidence": "ip-range",
+      "docs": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+    },
+    {
+      "id": "perplexitybot",
+      "operator": "perplexity",
+      "uaPattern": "PerplexityBot",
+      "purpose": "search",
+      "ipRangesUrl": "https://www.perplexity.com/perplexitybot.json",
+      "ipRangesFormat": "prefixes",
+      "rdnsSuffixes": [],
+      "maxConfidence": "ip-range",
+      "docs": "https://docs.perplexity.ai/guides/bots"
+    },
+    {
+      "id": "perplexity-user",
+      "operator": "perplexity",
+      "uaPattern": "Perplexity-User",
+      "purpose": "user-triggered",
+      "ipRangesUrl": "https://www.perplexity.com/perplexity-user.json",
+      "ipRangesFormat": "prefixes",
+      "rdnsSuffixes": [],
+      "maxConfidence": "ip-range",
+      "docs": "https://docs.perplexity.ai/guides/bots"
+    },
+    {
+      "id": "googleother",
+      "operator": "google",
+      "uaPattern": "GoogleOther",
+      "purpose": "training",
+      "ipRangesUrl": "https://developers.google.com/static/crawling/ipranges/common-crawlers.json",
+      "ipRangesFormat": "prefixes",
+      "rdnsSuffixes": ["googlebot.com", "geo.googlebot.com"],
+      "maxConfidence": "rdns",
+      "docs": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers"
+    },
+    {
+      "id": "applebot",
+      "operator": "apple",
+      "uaPattern": "Applebot",
+      "purpose": "search",
+      "ipRangesUrl": "https://search.developer.apple.com/applebot.json",
+      "ipRangesFormat": "prefixes",
+      "rdnsSuffixes": ["applebot.apple.com"],
+      "maxConfidence": "rdns",
+      "docs": "https://support.apple.com/en-us/119829"
+    },
+    {
+      "id": "ccbot",
+      "operator": "commoncrawl",
+      "uaPattern": "CCBot",
+      "purpose": "training",
+      "ipRangesUrl": null,
+      "ipRangesFormat": null,
+      "rdnsSuffixes": [],
+      "maxConfidence": "ua-only",
+      "docs": "https://commoncrawl.org/ccbot"
+    },
+    {
+      "id": "meta-externalagent",
+      "operator": "meta",
+      "uaPattern": "meta-externalagent",
+      "purpose": "training",
+      "ipRangesUrl": null,
+      "ipRangesFormat": null,
+      "rdnsSuffixes": [],
+      "maxConfidence": "ua-only",
+      "docs": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/"
+    },
+    {
+      "id": "meta-externalfetcher",
+      "operator": "meta",
+      "uaPattern": "meta-externalfetcher",
+      "purpose": "user-triggered",
+      "ipRangesUrl": null,
+      "ipRangesFormat": null,
+      "rdnsSuffixes": [],
+      "maxConfidence": "ua-only",
+      "docs": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers/"
+    },
+    {
+      "id": "bytespider",
+      "operator": "bytedance",
+      "uaPattern": "Bytespider",
+      "purpose": "training",
+      "ipRangesUrl": null,
+      "ipRangesFormat": null,
+      "rdnsSuffixes": [],
+      "maxConfidence": "ua-only",
+      "docs": "https://github.com/ai-robots-txt/ai.robots.txt"
+    },
+    {
+      "id": "amazonbot",
+      "operator": "amazon",
+      "uaPattern": "Amazonbot",
+      "purpose": "training",
+      "ipRangesUrl": null,
+      "ipRangesFormat": null,
+      "rdnsSuffixes": [],
+      "maxConfidence": "ua-only",
+      "docs": "https://developer.amazon.com/amazonbot"
+    },
+    {
+      "id": "mistralai-user",
+      "operator": "mistral",
+      "uaPattern": "MistralAI-User",
+      "purpose": "user-triggered",
+      "ipRangesUrl": null,
+      "ipRangesFormat": null,
+      "rdnsSuffixes": [],
+      "maxConfidence": "ua-only",
+      "docs": "https://github.com/ai-robots-txt/ai.robots.txt"
+    },
+    {
+      "id": "cohere-ai",
+      "operator": "cohere",
+      "uaPattern": "cohere-ai",
+      "purpose": "user-triggered",
+      "ipRangesUrl": null,
+      "ipRangesFormat": null,
+      "rdnsSuffixes": [],
+      "maxConfidence": "ua-only",
+      "docs": "https://github.com/ai-robots-txt/ai.robots.txt"
+    },
+    {
+      "id": "ai2bot",
+      "operator": "ai2",
+      "uaPattern": "AI2Bot",
+      "purpose": "training",
+      "ipRangesUrl": null,
+      "ipRangesFormat": null,
+      "rdnsSuffixes": [],
+      "maxConfidence": "ua-only",
+      "docs": "https://github.com/ai-robots-txt/ai.robots.txt"
+    },
+    {
+      "id": "youbot",
+      "operator": "you",
+      "uaPattern": "YouBot",
+      "purpose": "search",
+      "ipRangesUrl": null,
+      "ipRangesFormat": null,
+      "rdnsSuffixes": [],
+      "maxConfidence": "ua-only",
+      "docs": "https://github.com/ai-robots-txt/ai.robots.txt"
+    },
+    {
+      "id": "diffbot",
+      "operator": "diffbot",
+      "uaPattern": "Diffbot",
+      "purpose": "training",
+      "ipRangesUrl": null,
+      "ipRangesFormat": null,
+      "rdnsSuffixes": [],
+      "maxConfidence": "ua-only",
+      "docs": "https://github.com/ai-robots-txt/ai.robots.txt"
+    },
+    {
+      "id": "duckassistbot",
+      "operator": "duckduckgo",
+      "uaPattern": "DuckAssistBot",
+      "purpose": "user-triggered",
+      "ipRangesUrl": null,
+      "ipRangesFormat": null,
+      "rdnsSuffixes": [],
+      "maxConfidence": "ua-only",
+      "docs": "https://github.com/ai-robots-txt/ai.robots.txt"
+    }
+  ]
+}
