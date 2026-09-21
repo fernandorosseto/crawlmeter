@@ -174,7 +174,7 @@ describe("the repository", () => {
   it("contains no personal email address", () => {
     // Contact goes through GitHub. Placeholder domains and the bot address in
     // commit trailers are fine.
-    const allowed = /@([\w.-]+\.)?(example\.(com|org)|users\.noreply\.github\.com|anthropic\.com)$/i;
+    const allowed = /@([\w.-]+\.)?(example\.(com|org)|users\.noreply\.github\.com|anthropic\.com)$|^git@github\.com$/i;
     const hits = TRACKED.flatMap((file) =>
       [...file.text.matchAll(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}\b/g)]
         .map((match) => match[0])
